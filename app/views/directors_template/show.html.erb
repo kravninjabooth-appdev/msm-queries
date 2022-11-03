@@ -1,4 +1,4 @@
-<h1> Director <%= @the_director.id%> details</h1>
+<h1> Director #<%= @the_director.id%> details</h1>
 
 
 <a href="/directors" class="btn btn-block btn-outline-secondary">
@@ -47,13 +47,42 @@
     Created at
   </dt>
   <dd>
-    <#%= @the_director.created_at%>
+    <%= time_ago_in_words(@the_director.created_at)%> ago
   </dd>
 
   <dt>
     Updated at
   </dt>
   <dd>
-    <#%=@the_director.updated_at %>
+    <%=time_ago_in_words(@the_director.updated_at) %> ago
   </dd>
 </dl>
+
+<h2>Filmography</h2>
+
+<table border ="1">
+<%@filmography.each do |a_film|%>
+  <tr>
+    <td>
+      <%= a_film.id%>
+    </td>
+    <td>
+      <%= a_film.image%>
+    </td>
+    <td>
+      <%= a_film.title%>
+    </td>
+    <td>
+      <%= a_film.year%>
+    </td>
+    <td>
+      <%= a_film.director_id%>
+    </td>
+    <td>
+      <a href="">
+      Show details
+      </a>
+    </td>
+  </tr>
+<%end%>
+</table>
