@@ -1,10 +1,10 @@
-<h1>
-  Director <%= @the_director.id%> details
-</h1>
+<h1> Director <%= @the_director.id%> details</h1>
+
 
 <a href="/directors" class="btn btn-block btn-outline-secondary">
   Go back
 </a>
+
 
 &nbsp;|&nbsp;
 
@@ -29,31 +29,31 @@
     <%=@the_director.dob %>
   </dd>
 
-<dt>
-  Bio
-</dt>
-  <%=@the_director.bio %>
-<dd>
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%=@the_director.bio %>
+  </dd>
 
-</dd>
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <%=@the_director.image %>
+  </dd>
 
-<dt>
-  Image
-</dt>
-<dd>
-  <%=@the_director.image %>
-</dd>
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <#%= @the_director.created_at%>
+  </dd>
 
-<dt>
-  Created at
-</dt>
-<dd>
-  <#%= %>
-</dd>
-
-<dt>
-  Updated at
-</dt>
-<dd>
-  <#%= %>
-</dd>
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <#%=@the_director.updated_at %>
+  </dd>
+</dl>
