@@ -67,7 +67,7 @@
       <%= a_film.id%>
     </td>
     <td>
-      <%= a_film.image%>
+      <img src="http://robohash.org/<%= a_film.image%>?set=set4">
     </td>
     <td>
       <%= a_film.title%>
@@ -76,10 +76,11 @@
       <%= a_film.year%>
     </td>
     <td>
-      <%= a_film.director_id%>
+      <% d = Director.where({ :id => a_film.director_id}).at(0) %>
+      <%= d.name %>
     </td>
     <td>
-      <a href="">
+      <a href="/movies/<%= a_film.id %>">
       Show details
       </a>
     </td>
