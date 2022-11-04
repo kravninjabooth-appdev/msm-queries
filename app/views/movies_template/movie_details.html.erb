@@ -18,46 +18,55 @@
     Title
   </dt>
   <dd>
-    <%=@the_movie_id.title %>
+    <%=@the_movie.title %>
   </dd>
 
   <dt>
     Year
   </dt>
   <dd>
-    <%#@the_director.year %>
+    <%=@the_movie.year %>
   </dd>
 
   <dt>
     Duration
   </dt>
   <dd>
-    <%#@the_director.duration %>
+    <%=@the_movie.duration %>
   </dd>
 
   <dt>
     Description
   </dt>
   <dd>
-    <%#@the_director.description %>
+    <%=@the_movie.description %>
   </dd>
 
   <dt>
     Image
   </dt>
-<img src="http://robohash.org/<%= @the_director.image%>?set=set2">
+<img src="http://robohash.org/<%= @the_movie.image%>?set=set2">
+
+<dl>
+  <dt>
+    Director
+  </dt>
+  <dd>
+    <%=@the_movie.director_id %>
+  </dd>
+
 
   <dt>
     Created at
   </dt>
   <dd>
-    <%# time_ago_in_words(@the_director.created_at)%> ago
+    <%= time_ago_in_words(@the_movie.created_at)%> ago
   </dd>
 
   <dt>
     Updated at
   </dt>
   <dd>
-    <%#time_ago_in_words(@the_director.updated_at) %> ago
+    <%=time_ago_in_words(@the_movie.updated_at) %> ago
   </dd>
 </dl>
