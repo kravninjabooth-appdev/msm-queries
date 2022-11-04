@@ -7,11 +7,11 @@ class MoviesController < ApplicationController
   end
 
   def movie_details
-    # params looks like {"an id" => "42"}
-    the_id = params.fetch("an_id")
+    # params looks like  Parameters: {"id"=>"movies"}
+    the_movie_id = params.fetch("id")
     
-    @the_director = Director.where({:id => the_id}).at(0)
-    @filmography = Movie.where({:director_id => the_id})
+    @the_director = Director.where({:id => the_movie_id}).at(0)
+    @filmography = Movie.where({:director_id => the_movie_id})
 
     render ({:template => "movies_template/movie_details.html.erb"})
   end
