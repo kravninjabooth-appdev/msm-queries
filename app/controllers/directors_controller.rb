@@ -14,7 +14,7 @@ class DirectorsController < ApplicationController
   end
 
   def director_details
-    # params looks lik {"an id" => "42"}
+    # params looks like {"an id" => "42"}
     the_id = params.fetch("an_id")
     
     @the_director = Director.where({:id => the_id}).at(0)
