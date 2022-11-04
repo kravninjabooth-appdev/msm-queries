@@ -1,3 +1,63 @@
 <h1> Movie #<%=@the_movie_id%> details</h1>
 
+<a href="/movies" class="btn btn-block btn-outline-secondary">
+  Go back
+</a>
 
+
+&nbsp;|&nbsp;
+
+<a href="/delete_movie/<%= @the_movie_id%>" class ="btn btn-block btn-outline-secondary">
+  Delete movie
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Title
+  </dt>
+  <dd>
+    <%=@the_movie_id.title %>
+  </dd>
+
+  <dt>
+    Year
+  </dt>
+  <dd>
+    <%#@the_director.year %>
+  </dd>
+
+  <dt>
+    Duration
+  </dt>
+  <dd>
+    <%#@the_director.duration %>
+  </dd>
+
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%#@the_director.description %>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+<img src="http://robohash.org/<%= @the_director.image%>?set=set2">
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%# time_ago_in_words(@the_director.created_at)%> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%#time_ago_in_words(@the_director.updated_at) %> ago
+  </dd>
+</dl>
