@@ -10,7 +10,10 @@
       </td>
       <td><%= a_clip.title %></td>
       <td><%= a_clip.year %></td>
-      <td><%= a_clip.director_id %></td>
+      <td>
+      <% d = Director.where({ :id => a_clip.director_id}).at(0) %>
+      <%= d.name %>
+      </td>
       <td>
         <a href = "/movies/<%= a_clip.id %>">
         Show details
